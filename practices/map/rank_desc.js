@@ -1,6 +1,7 @@
 'use strict';
-var rank_desc = function(collection){
-  return [2,3,4,5,6];
+var rank_desc = function (collection) {
+  const comparator = (a, b) => a > b ? 1 : -1;
+  return collection.sort(comparator);
 };
 
 module.exports = rank_desc;
