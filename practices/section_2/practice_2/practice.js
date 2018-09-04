@@ -1,9 +1,10 @@
 function count_same_elements(collection) {
   //在这里写入代码
   const selector = (arr, val) => {
-    if (val.includes('-')) {
-      var str = val.split('-');
-      arr[str[0]] = str[1];
+    var count = parseInt(val.replace(/[^0-9]/g, ''));
+    if (!Number.isNaN(count)) {
+      var key = val.match(/^[A-Za-z]*/g);
+      arr[key] = count;
       return arr;
     }
     if (val in arr) {
