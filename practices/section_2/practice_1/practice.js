@@ -8,7 +8,15 @@ function count_same_elements(collection) {
     }
     return arr;
   }
-  return collection.reduce(selector, {});
+  var array = collection.reduce(selector, {});
+  var res = [];
+  for (var obj in array) {
+    var temp = new Object();
+    temp.key = obj;
+    temp.count = array[obj];
+    res.push(temp);
+  }
+  return res;
 }
 
 module.exports = count_same_elements;
