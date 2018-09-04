@@ -6,7 +6,12 @@ function median_to_letter(collection) {
   let lowMiddle = Math.floor((collection.length - 1) / 2);
   let highMiddle = Math.ceil((collection.length - 1) / 2);
   let median = Math.round((collection[lowMiddle] + collection[highMiddle]) / 2);
-  return median === 37 ? 'ak' : "";
+  const mapper = (value) => {
+    let numOfA = value / 26;
+    let charCode = value % 26 + 'a'.charCodeAt(0) - 1;
+    return 'a'.repeat(numOfA) + String.fromCharCode(charCode);
+  }
+  return mapper(median);
 }
 
 module.exports = median_to_letter;
