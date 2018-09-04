@@ -1,7 +1,11 @@
 'use strict';
 var number_map_to_word = function (collection) {
-  var strings = ['a', 'b', 'c', 'd', 'e'];
-  return collection.map(number => strings[collection.indexOf(number)]);
+  const map = (value) => {
+    let numOfA = value / 26;
+    let charCode = value % 26 + 'a'.charCodeAt(0) - 1;
+    return 'a'.repeat(numOfA) + String.fromCharCode(charCode);
+  }
+  return collection.map(number => map(number));
 };
 
 module.exports = number_map_to_word;
