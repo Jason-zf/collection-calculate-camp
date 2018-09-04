@@ -1,16 +1,13 @@
 function count_same_elements(collection) {
   //在这里写入代码
   const selector = (arr, val) => {
-    var count = parseInt(val.replace(/[^0-9]/g, ''));
-    if (!Number.isNaN(count)) {
-      var key = val.match(/^[A-Za-z]*/g);
-      arr[key] = count;
-      return arr;
-    }
-    if (val in arr) {
-      arr[val]++;
+    var count = Number.isNaN(parseInt(val.replace(/[^0-9]/g, ''))) === true ? 1 : parseInt(val.replace(/[^0-9]/g, ''));
+    var key = val.match(/^[A-Za-z]*/g);
+
+    if (key in arr) {
+      arr[key] += count;
     } else {
-      arr[val] = 1;
+      arr[key] = count;
     }
     return arr;
   }
