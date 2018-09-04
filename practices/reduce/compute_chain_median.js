@@ -1,5 +1,5 @@
 'use strict';
-var calculateMedian = require('../../common/calculateMedian.js');
+var calculateMedian = require('../../common/calculate_median.js');
 
 function compute_chain_median(collection) {
   //在这里写入代码

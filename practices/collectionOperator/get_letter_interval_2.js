@@ -1,5 +1,5 @@
 'use strict';
-var numberMapToLetter = require('../../common/numberMapperToLetter.js');
+var numberMapToLetter = require('../../common/number_mapper_to_letter.js');
 
 function get_letter_interval_2(number_a, number_b) {
   //在这里写入代码

@@ -1,6 +1,6 @@
 'use strict';
-var numberMapToLetter = require('../../../common/numberMapperToLetter.js');
-var calculateMedian = require('../../../common/calculateMedian.js');
+var numberMapToLetter = require('../../../common/number_mapper_to_letter.js');
+var calculateMedian = require('../../../common/calculate_median.js');
 
 function median_to_varter(collection) {
 

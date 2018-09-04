@@ -1,5 +1,5 @@
 'use strict';
-var numberMapToLetter = require('../../../common/numberMapperToLetter.js');
+var numberMapToLetter = require('../../../common/number_mapper_to_letter.js');
 
 function even_to_letter(collection) {
 

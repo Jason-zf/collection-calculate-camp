@@ -1,5 +1,5 @@
 'use strict';
-var calculateMedian = require('../../../../common/calculateMedian.js');
+var calculateMedian = require('../../../../common/calculate_median.js');
 
 var calculate_median = function (collection) {
   var array = collection.filter(value => (collection.indexOf(value) + 1) % 2 === 0);
