@@ -1,4 +1,3 @@
-
 function count_same_elements(collection) {
   //在这里写入代码
   const selector = (arr, val) => {
@@ -10,14 +9,9 @@ function count_same_elements(collection) {
     return arr;
   }
   var array = collection.reduce(selector, {});
-  var res = [];
-  for (var obj in array) {
-    var temp = new Object();
-    temp.key = obj;
-    temp.count = array[obj];
-    res.push(temp);
-  }
-  return res;
+  return Object.keys(array).map(key => {
+    return {'key': key, 'count': array[key]}
+  });
 }
 
 module.exports = count_same_elements;
